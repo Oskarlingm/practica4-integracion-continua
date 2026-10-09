@@ -14,13 +14,12 @@ jobs:
       - name: Descargar repositorio
         uses: actions/checkout@v4
 
-      - name: Ejecutar Hola Mundo
+      - name: Ejecutar programa
         run: node hola.js
 
       - name: Enviar notificacion
         run: |
           curl --fail-with-body --retry 3 \
             -H "Title: Practica 4 - ITLA" \
-            -H "Tags: white_check_mark" \
             -d "Nueva actualizacion en GitHub - Oskarling Mendez" \
             https://ntfy.sh/devops-itla
